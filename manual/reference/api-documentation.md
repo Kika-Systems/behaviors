@@ -48,78 +48,78 @@
 -   [APIConfig][44]
     -   [Properties][45]
 -   [config][46]
--   [getMdataSymbol][47]
-    -   [Parameters][48]
--   [isBehavior][49]
-    -   [Parameters][50]
--   [timeDiff][51]
-    -   [Parameters][52]
--   [isObject][53]
-    -   [Parameters][54]
--   [regexSource][55]
-    -   [Parameters][56]
--   [isString][57]
-    -   [Parameters][58]
--   [isRegex][59]
-    -   [Parameters][60]
--   [isStringOrRegex][61]
-    -   [Parameters][62]
--   [isBoolean][63]
-    -   [Parameters][64]
--   [ensureJsFileExt][65]
-    -   [Parameters][66]
--   [inspect][67]
-    -   [Parameters][68]
--   [joinStrings][69]
-    -   [Parameters][70]
--   [stringifyArray][71]
-    -   [Parameters][72]
--   [numberOrdinalSuffix][73]
-    -   [Parameters][74]
--   [serverCom][75]
--   [serverCom][76]
--   [behaviorMetadata][77]
--   [mdataPath][78]
--   [behaviorDir][79]
--   [behaviorDir][80]
--   [workerId][81]
--   [behaviorMatches][82]
+-   [rootDir][47]
+-   [libDir][48]
+-   [finalLibDirImportPath][49]
+-   [behaviorDir][50]
+-   [behaviorDir][51]
+-   [buildDir][52]
+-   [distDir][53]
+-   [tsConfigFilePath][54]
+-   [defaultBehaviorMetadataPath][55]
+-   [behaviorCLIPath][56]
+-   [defaultBehaviorConfigPath][57]
+-   [makeFinalBehaviorImportPath][58]
+    -   [Parameters][59]
+-   [directoryIndexPath][60]
+    -   [Parameters][61]
+-   [directoryIndexExists][62]
+    -   [Parameters][63]
+-   [getMdataSymbol][64]
+    -   [Parameters][65]
+-   [isBehavior][66]
+    -   [Parameters][67]
+-   [timeDiff][68]
+    -   [Parameters][69]
+-   [isObject][70]
+    -   [Parameters][71]
+-   [regexSource][72]
+    -   [Parameters][73]
+-   [isString][74]
+    -   [Parameters][75]
+-   [isRegex][76]
+    -   [Parameters][77]
+-   [isStringOrRegex][78]
+    -   [Parameters][79]
+-   [isBoolean][80]
+    -   [Parameters][81]
+-   [ensureJsFileExt][82]
     -   [Parameters][83]
--   [removeItemFromRequireCache][84]
+-   [inspect][84]
     -   [Parameters][85]
--   [loadBehaviorMdata][86]
--   [createReplyObj][87]
-    -   [Parameters][88]
--   [onMsg][89]
-    -   [Parameters][90]
--   [findBehavior][91]
-    -   [Parameters][92]
--   [lookupBehavior][93]
-    -   [Parameters][94]
--   [lookupBehaviorInfo][95]
-    -   [Parameters][96]
--   [reloadBehaviors][97]
+-   [joinStrings][86]
+    -   [Parameters][87]
+-   [stringifyArray][88]
+    -   [Parameters][89]
+-   [numberOrdinalSuffix][90]
+    -   [Parameters][91]
+-   [serverCom][92]
+-   [serverCom][93]
+-   [behaviorMetadata][94]
+-   [mdataPath][95]
+-   [workerId][96]
+-   [behaviorMatches][97]
     -   [Parameters][98]
--   [allBehaviorInfo][99]
+-   [removeItemFromRequireCache][99]
     -   [Parameters][100]
--   [behaviorList][101]
-    -   [Parameters][102]
--   [prepareBehaviors][103]
-    -   [Parameters][104]
--   [rootDir][105]
--   [libDir][106]
--   [finalLibDirImportPath][107]
--   [buildDir][108]
--   [distDir][109]
--   [tsConfigFilePath][110]
--   [defaultBehaviorMetadataPath][111]
--   [behaviorCLIPath][112]
--   [defaultBehaviorConfigPath][113]
--   [makeFinalBehaviorImportPath][114]
+-   [loadBehaviorMdata][101]
+-   [createReplyObj][102]
+    -   [Parameters][103]
+-   [onMsg][104]
+    -   [Parameters][105]
+-   [findBehavior][106]
+    -   [Parameters][107]
+-   [lookupBehavior][108]
+    -   [Parameters][109]
+-   [lookupBehaviorInfo][110]
+    -   [Parameters][111]
+-   [reloadBehaviors][112]
+    -   [Parameters][113]
+-   [allBehaviorInfo][114]
     -   [Parameters][115]
--   [directoryIndexPath][116]
+-   [behaviorList][116]
     -   [Parameters][117]
--   [directoryIndexExists][118]
+-   [prepareBehaviors][118]
     -   [Parameters][119]
 -   [initRoutes][120]
     -   [Parameters][121]
@@ -330,7 +330,7 @@ Returns **[number][126]**
 ## getDefaultHost
 
 Returns the default port the api server will listen on.
-If the env variable WR_BEHAVIOR_HOST is set returns it's value
+If the env variable WR_BEHAVIOR_HOST is set returns its value
 otherwise returns 127.0.0.1
 
 Returns **[string][125]** 
@@ -383,6 +383,74 @@ Type: [Object][124]
 The behavior API server config object
 
 Type: [APIConfig][135]
+
+## rootDir
+
+Type: [string][125]
+
+## libDir
+
+Type: [string][125]
+
+## finalLibDirImportPath
+
+Type: [string][125]
+
+## behaviorDir
+
+Type: [string][125]
+
+## behaviorDir
+
+Type: [string][125]
+
+## buildDir
+
+Type: [string][125]
+
+## distDir
+
+Type: [string][125]
+
+## tsConfigFilePath
+
+Type: [string][125]
+
+## defaultBehaviorMetadataPath
+
+Type: [string][125]
+
+## behaviorCLIPath
+
+Type: [string][125]
+
+## defaultBehaviorConfigPath
+
+Type: [string][125]
+
+## makeFinalBehaviorImportPath
+
+### Parameters
+
+-   `behaviorFilePath` **[string][125]** 
+
+Returns **[string][125]** 
+
+## directoryIndexPath
+
+### Parameters
+
+-   `dirPath` **[string][125]** 
+
+Returns **[string][125]** 
+
+## directoryIndexExists
+
+### Parameters
+
+-   `dirPath` **[string][125]** 
+
+Returns **[Promise][129]&lt;[boolean][134]>** 
 
 ## getMdataSymbol
 
@@ -515,14 +583,6 @@ Type: [Object][124]
 
 Type: [string][125]
 
-## behaviorDir
-
-Type: [string][125]
-
-## behaviorDir
-
-Type: [string][125]
-
 ## workerId
 
 Type: [number][126]
@@ -626,7 +686,7 @@ Replies with the metadata of all behaviors
 
 ## behaviorList
 
-Like [lookupBehaviorInfo][95] except that this function replies
+Like [lookupBehaviorInfo][110] except that this function replies
 with a list of matching behaviors (direct matches, default behavior)
 
 ### Parameters
@@ -644,66 +704,6 @@ returning a Promise that resolves once the behaviors have been built otherwise r
 -   `config` **[Object][124]** The behavior API server config
 
 Returns **[Promise][129]&lt;any>** 
-
-## rootDir
-
-Type: [string][125]
-
-## libDir
-
-Type: [string][125]
-
-## finalLibDirImportPath
-
-Type: [string][125]
-
-## buildDir
-
-Type: [string][125]
-
-## distDir
-
-Type: [string][125]
-
-## tsConfigFilePath
-
-Type: [string][125]
-
-## defaultBehaviorMetadataPath
-
-Type: [string][125]
-
-## behaviorCLIPath
-
-Type: [string][125]
-
-## defaultBehaviorConfigPath
-
-Type: [string][125]
-
-## makeFinalBehaviorImportPath
-
-### Parameters
-
--   `behaviorFilePath` **[string][125]** 
-
-Returns **[string][125]** 
-
-## directoryIndexPath
-
-### Parameters
-
--   `dirPath` **[string][125]** 
-
-Returns **[string][125]** 
-
-## directoryIndexExists
-
-### Parameters
-
--   `dirPath` **[string][125]** 
-
-Returns **[Promise][129]&lt;[boolean][134]>** 
 
 ## initRoutes
 
@@ -814,149 +814,149 @@ Returns **[Promise][129]&lt;fastify.FastifyInstance>**
 
 [46]: #config
 
-[47]: #getmdatasymbol
+[47]: #rootdir
 
-[48]: #parameters-9
+[48]: #libdir
 
-[49]: #isbehavior
+[49]: #finallibdirimportpath
 
-[50]: #parameters-10
+[50]: #behaviordir
 
-[51]: #timediff
+[51]: #behaviordir-1
 
-[52]: #parameters-11
+[52]: #builddir
 
-[53]: #isobject
+[53]: #distdir
 
-[54]: #parameters-12
+[54]: #tsconfigfilepath
 
-[55]: #regexsource
+[55]: #defaultbehaviormetadatapath
 
-[56]: #parameters-13
+[56]: #behaviorclipath
 
-[57]: #isstring
+[57]: #defaultbehaviorconfigpath
 
-[58]: #parameters-14
+[58]: #makefinalbehaviorimportpath
 
-[59]: #isregex
+[59]: #parameters-9
 
-[60]: #parameters-15
+[60]: #directoryindexpath
 
-[61]: #isstringorregex
+[61]: #parameters-10
 
-[62]: #parameters-16
+[62]: #directoryindexexists
 
-[63]: #isboolean
+[63]: #parameters-11
 
-[64]: #parameters-17
+[64]: #getmdatasymbol
 
-[65]: #ensurejsfileext
+[65]: #parameters-12
 
-[66]: #parameters-18
+[66]: #isbehavior
 
-[67]: #inspect
+[67]: #parameters-13
 
-[68]: #parameters-19
+[68]: #timediff
 
-[69]: #joinstrings
+[69]: #parameters-14
 
-[70]: #parameters-20
+[70]: #isobject
 
-[71]: #stringifyarray
+[71]: #parameters-15
 
-[72]: #parameters-21
+[72]: #regexsource
 
-[73]: #numberordinalsuffix
+[73]: #parameters-16
 
-[74]: #parameters-22
+[74]: #isstring
 
-[75]: #servercom
+[75]: #parameters-17
 
-[76]: #servercom-1
+[76]: #isregex
 
-[77]: #behaviormetadata
+[77]: #parameters-18
 
-[78]: #mdatapath
+[78]: #isstringorregex
 
-[79]: #behaviordir
+[79]: #parameters-19
 
-[80]: #behaviordir-1
+[80]: #isboolean
 
-[81]: #workerid
+[81]: #parameters-20
 
-[82]: #behaviormatches
+[82]: #ensurejsfileext
 
-[83]: #parameters-23
+[83]: #parameters-21
 
-[84]: #removeitemfromrequirecache
+[84]: #inspect
 
-[85]: #parameters-24
+[85]: #parameters-22
 
-[86]: #loadbehaviormdata
+[86]: #joinstrings
 
-[87]: #createreplyobj
+[87]: #parameters-23
 
-[88]: #parameters-25
+[88]: #stringifyarray
 
-[89]: #onmsg
+[89]: #parameters-24
 
-[90]: #parameters-26
+[90]: #numberordinalsuffix
 
-[91]: #findbehavior
+[91]: #parameters-25
 
-[92]: #parameters-27
+[92]: #servercom
 
-[93]: #lookupbehavior-1
+[93]: #servercom-1
 
-[94]: #parameters-28
+[94]: #behaviormetadata
 
-[95]: #lookupbehaviorinfo
+[95]: #mdatapath
 
-[96]: #parameters-29
+[96]: #workerid
 
-[97]: #reloadbehaviors-1
+[97]: #behaviormatches
 
-[98]: #parameters-30
+[98]: #parameters-26
 
-[99]: #allbehaviorinfo
+[99]: #removeitemfromrequirecache
 
-[100]: #parameters-31
+[100]: #parameters-27
 
-[101]: #behaviorlist
+[101]: #loadbehaviormdata
 
-[102]: #parameters-32
+[102]: #createreplyobj
 
-[103]: #preparebehaviors
+[103]: #parameters-28
 
-[104]: #parameters-33
+[104]: #onmsg
 
-[105]: #rootdir
+[105]: #parameters-29
 
-[106]: #libdir
+[106]: #findbehavior
 
-[107]: #finallibdirimportpath
+[107]: #parameters-30
 
-[108]: #builddir
+[108]: #lookupbehavior-1
 
-[109]: #distdir
+[109]: #parameters-31
 
-[110]: #tsconfigfilepath
+[110]: #lookupbehaviorinfo
 
-[111]: #defaultbehaviormetadatapath
+[111]: #parameters-32
 
-[112]: #behaviorclipath
+[112]: #reloadbehaviors-1
 
-[113]: #defaultbehaviorconfigpath
+[113]: #parameters-33
 
-[114]: #makefinalbehaviorimportpath
+[114]: #allbehaviorinfo
 
 [115]: #parameters-34
 
-[116]: #directoryindexpath
+[116]: #behaviorlist
 
 [117]: #parameters-35
 
-[118]: #directoryindexexists
+[118]: #preparebehaviors
 
 [119]: #parameters-36
 
