@@ -56,7 +56,7 @@ const getDefaultPort = () => convertEnvInt('BEHAVIOR_API_PORT', DefaultPort);
 
 /**
  * Returns the default port the api server will listen on.
- * If the env variable WR_BEHAVIOR_HOST is set returns it's value
+ * If the env variable WR_BEHAVIOR_HOST is set returns its value
  * otherwise returns 127.0.0.1
  * @return {string}
  */
